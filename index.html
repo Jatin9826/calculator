@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Calculator</title>
+  <style>
+    #calculator {
+      max-width: 300px;
+      margin: auto;
+      text-align: center;
+    }
+    #display {
+      background: #f4f4f4;
+      font-size: 2em;
+      padding: 10px;
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+      text-align: right;
+    }
+    #history {
+      font-size: 0.9em;
+      color: gray;
+      margin-bottom: 10px;
+      text-align: right;
+    }
+    #buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 5px;
+    }
+    .btn {
+      padding: 15px;
+      font-size: 1.2em;
+      background: #e0e0e0;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #d0d0d0;
+    }
+    #equals {
+      background: #ffa726;
+      color: white;
+    }
+    #equals:hover {
+      background: #fb8c00;
+    }
+    #clear, #delete {
+      background: #ef5350;
+      color: rgb(30, 10, 119);
+    }
+    #clear:hover, #delete:hover {
+      background: #e53935;
+    }
+  </style>
+</head>
+<body>
+  <h1>Simple Calculator</h1>
+  <div id="calculator">
+    <div id="display">0</div>
+    <div id="history"></div>
+    <div id="buttons">
+      
+      <button id="delete" class="btn">DEL</button>
+      <button class="btn" data-value="/">/</button>
+      <button class="btn" data-value="*">*</button>
+      <button class="btn" data-value="7">7</button>
+      <button class="btn" data-value="8">8</button>
+      <button class="btn" data-value="9">9</button>
+      <button class="btn" data-value="-">-</button>
+      <button class="btn" data-value="4">4</button>
+      <button class="btn" data-value="5">5</button>
+      <button class="btn" data-value="6">6</button>
+      <button class="btn" data-value="+">+</button>
+      <button class="btn" data-value="1">1</button>
+      <button class="btn" data-value="2">2</button>
+      <button class="btn" data-value="3">3</button>
+      <button id="equals" class="btn" data-value="=">=</button>
+      <button class="btn" data-value="0" style="grid-column: span 2;">0</button>
+      <button class="btn" data-value=".">.</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
